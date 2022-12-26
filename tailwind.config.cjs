@@ -24,7 +24,12 @@ module.exports = {
         waveHand:'waveHand 1.5s infinite'
       },
       screens:{
-        '4xl':'2000px'
+        '4xl':'2000px',
+        'btnMd':'767px',
+        'btnLg':'883px'
+      },
+      zIndex:{
+        '1':'1'
       }
     },
   },
