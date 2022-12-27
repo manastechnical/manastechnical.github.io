@@ -2,7 +2,7 @@ import React from 'react';
 import {BsTwitter,BsInstagram} from 'react-icons/bs';
 import {FaFacebook} from 'react-icons/fa';
 
-function SocialMedia() {
+const SocialMedia = () => {
   return (
     <div className='hidden sm:flex justify-end items-center flex-col p-4'>
       <div className='w-[40px] h-[40px] rounded-[50%] bg-white my-1 mx-0 border-2 border-solid border-[#e4e4e4] flex justify-center items-center transition-all duration-300 ease-in-out hover:bg-[#313bac] hover:border-[#313bac]'>

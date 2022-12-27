@@ -8,7 +8,7 @@ import mongodb from '../assets/mongodb.jpg';
 import AppWrap from '../wrapper/AppWrapper';
 
 
-function Header() {
+const Header = () => {
 
     const scaleVariants = {
         whileInView: {
@@ -22,7 +22,7 @@ function Header() {
     }
 
     return (
-        <div className='bg-[url("https://i.ibb.co/0nkXPzr/bgIMG.png")] bg-cover bg-repeat bg-center flex-1 w-full h-full flex-col pt-24 4xl:pt-2 lg:flex-row flex justify-center items-center'>
+        <div className='flex-1 w-full h-full flex-col pt-24 4xl:pt-2 lg:flex-row flex justify-center items-center'>
             <motion.div className='flex-[0.65] flex flex-col justify-start items-start h-full my-0 mx-8 4xl:w-full 4xl:mr-0 pb-16' whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ duration: 0.5 }}>
                 <div className='w-full flex justify-start items-start lg:justify-end md:items-end flex-col'>
                     <div className='py-4 px-8 border-white rounded-[15px] flex w-auto shadow-md shadow-gray-500'>
