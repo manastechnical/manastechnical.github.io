@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-// import {ReactToolTip} from 'react-tooltip';
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 import {motion} from 'framer-motion';
 import AppWrap from '../wrapper/AppWrapper';
 import tcss from '../assets/tcss.png';
@@ -15,7 +15,7 @@ import java from '../assets/java.png';
 
 const Skills = () => {
 
-    const data = [
+    const skills = [
         {name:'React',icon:react,bgColor:''},
         {name:'JavaScript',icon:js,bgColor:''},
         {name:'CSS',icon:css,bgColor:''},
@@ -28,8 +28,12 @@ const Skills = () => {
         {name:'Java',icon:java,bgColor:''},
     ]
 
-    const [experience,setExperience] = useState();
-    const [skills,setSkills] = useState(data);
+    const experience = [
+      {company:"Google",name:"Backend Developer",desc:"I worked as a backend developer at Google for 4months"}
+    ]
+
+    // const [experience,setExperience] = useState();
+    // const [skills,setSkills] = useState(data);
 
   return (
     <div className='flex-1 w-full flex-col font-allerta'>
@@ -44,6 +48,19 @@ const Skills = () => {
                     <p className='text-sm text-left text-gray-500 4xl:text-2xl font-medium mt-2 4xl:mt-4'>{skill.name}</p>
                 </motion.div>
             ))}
+        </motion.div>
+        <motion.div className='app__skills-exp'>
+              {experience.map((work)=>(
+                <>
+                  <motion.div whileInView={{opacity:[0,1]}} transition={{duration:0.5}} className='app__skills-exp-work' data-tip data-for={work.name} key={work.name}>
+                    <h4 className='bold-text'>{work.name}</h4>
+                    <p className='p-text'>{work.company}</p>
+                  </motion.div>
+                  <ReactTooltip id={work.name} effect="solid" arrowColor="#fff" className='skills-tooltip'>
+                    {work.desc}
+                  </ReactTooltip>
+                </>
+              ))}
         </motion.div>
       </div>
     </div>
