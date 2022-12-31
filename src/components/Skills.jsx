@@ -36,7 +36,7 @@ const Skills = () => {
     // const [skills,setSkills] = useState(data);
 
   return (
-    <div className='flex-1 w-full flex-col font-allerta'>
+    <div className='flex-1 w-full flex-col font-allerta mt-16'>
       <h2 className='mt-16 lg:mt-20 text-3xl sm:text-5xl text-purple-900 font-extrabold text-center capitalize 4xl:text-7xl'>Skills <span className='text-black'>&</span> Experience</h2>
       <div className='flex lg:flex-row w-full justify-center items-center flex-col gap-2 lg:gap-0'>
         <motion.div className='flex-1 flex flex-wrap gap-4 mt-20 mr-0 justify-center items-center'>
