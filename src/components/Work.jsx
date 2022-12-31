@@ -42,7 +42,7 @@ const Work = () => {
     
   return (
     <div className='flex-1 w-full flex-col'>
-      <h2 className='font-allerta sm:text-5xl font-extrabold text-center uppercase text-black 4xl:text-[4rem] text-3xl'>My Creative <span className='text-purple-900'>Portfolio</span> Section</h2>
+      <h2 className='mt-16 font-allerta sm:text-5xl font-extrabold text-center uppercase text-black 4xl:text-[4rem] text-3xl'>My Creative <span className='text-purple-900'>Portfolio</span> Section</h2>
       <div className='flex flex-row justify-center gap-4 items-center flex-wrap mt-16 mx-0 mb-8'>
         {["Web App","Mobile App","HCJ","ALL"].map((item,index)=>(
             <div key={index} onClick={()=>handleWorkFilter(item)} className={`py-2 px-4 rounded-lg bg-white font-extrabold cursor-pointer transition-all duration-300 ease-out hover:bg-[#313bac] hover:text-white 4xl:py-4 4xl:px-8 4xl:rounded-xl flex justify-center items-center text-sm text-left text-[#6b7688] ${activeFilter === item ? 'bg-[#313bac] text-white': ''}`}>
